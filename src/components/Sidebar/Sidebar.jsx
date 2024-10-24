@@ -21,12 +21,12 @@ export default function Sidebar() {
                 <span>Exercise Library</span>
               </NavLink>
             </li>
-            {/* <li>
+            <li>
               <NavLink to={`/create`}>
                
                 <span>Workout Creator</span>
               </NavLink>
-            </li> */}
+            </li>
           </ul>
         </nav>
       </div>
