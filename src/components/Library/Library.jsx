@@ -164,12 +164,12 @@ export default function Library({ exercises, size, handleClick }) {
                 // <Link key={item.ID} to={`../exercises/${item.ID}`}>
                 <ImageListItem
                   key={item.ID}
-                  // onClick={() => {
-                  //   if (handleClick) {
-                  //     // console.log(item)
-                  //     handleClick(item);
-                  //   }
-                  // }}
+                  onClick={() => {
+                    if (handleClick) {
+                      // console.log(item)
+                      handleClick(item);
+                    }
+                  }}
                 >
                   <img src={item.ImageLink} alt={item.Name} />
                   <ImageListItemBar title={item.Name}></ImageListItemBar>

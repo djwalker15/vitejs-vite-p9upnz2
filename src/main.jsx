@@ -6,6 +6,7 @@ import './index.css';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import LibraryPage from './pages/LibraryPage/LibraryPage.jsx';
 import NotFoundErrorPage from './pages/NotFoundErrorPage/NotFoundErrorPage.jsx';
+import WorkoutCreatorPage from './pages/WorkoutCreatorPage/WorkoutCreatorPage.jsx';
 import Root from './components/Root/Root.jsx';
 
 const queryClient = new QueryClient();
@@ -33,13 +34,13 @@ const router = createBrowserRouter([
             // loader: contactLoader,
             // action: contactAction,
           },
-          // {
-          //   // Create Workout
-          //   path: 'create',
-          //   element: <WorkoutCreatorPage />,
-          //   // loader: contactLoader,
-          //   // action: contactAction,
-          // },
+          {
+            // Create Workout
+            path: 'create',
+            element: <WorkoutCreatorPage />,
+            // loader: contactLoader,
+            // action: contactAction,
+          },
           // {
           //   // Exercise Library
           //   path: 'exercises/:exerciseId',
