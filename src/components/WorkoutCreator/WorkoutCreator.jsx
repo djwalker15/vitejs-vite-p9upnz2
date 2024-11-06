@@ -71,7 +71,7 @@ import {
         console.log(exerciseCards);
         setValue(value - 1);
         let newExerciseCards = exerciseCards.slice(0, exerciseCards.length - 1);
-        setExerciseCards((prev) => [...prev, Array.from(newExerciseCards)]);
+        setExerciseCards(newExerciseCards);
         console.log(`Exercise cards after decrement:`, newExerciseCards);
       }
     };
@@ -81,13 +81,8 @@ import {
         setValue(value + 1);
         let newExerciseCards = null;
         console.log(exerciseCards);
-        // if (exerciseCards.length === 0) {
-        //   console.log("yeah");
-        //   newExerciseCards = Array(1).fill(...provideExerciseCard(1));
-        // } else {
-        //   newExerciseCards = [...exerciseCards, ...provideExerciseCard(1)];
-        // }
-        setExerciseCards((prev) => [...prev, ...provideExerciseCard(1)]);
+        newExerciseCards = [...exerciseCards, ...provideExerciseCard(1)]
+        setExerciseCards(newExerciseCards);
   
         console.log(`Exercise cards after increment:`, newExerciseCards);
       }
