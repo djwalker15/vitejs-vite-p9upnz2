@@ -1,0 +1,23 @@
+.selected-exercises {
+    display: flex;
+    height: auto;
+}
+
+.selected-exercises img {
+    height: 200px;
+    width: 200px;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.creator-settings {
+    margin-right: 24px;
+}
+
+.creator-inputs {
+    display: flex;
+    
+}

@@ -1,24 +1,9 @@
 import {
     Box,
-    Grid2,
     IconButton,
     Input,
-    Slider,
     Typography,
-    Card,
-    CardHeader,
     ImageList,
-    ImageListItem,
-    CardContent,
-    Button,
-    Checkbox,
-    FormControl,
-    FormLabel,
-    FormGroup,
-    FormControlLabel,
-    Accordion,
-    AccordionSummary,
-    AccordionDetails,
   } from "@mui/material";
   import { useState } from "react";
   import { useMeasure } from "@uidotdev/usehooks";

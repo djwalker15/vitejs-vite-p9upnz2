@@ -8,6 +8,9 @@ import LibraryPage from './pages/LibraryPage/LibraryPage.jsx';
 import NotFoundErrorPage from './pages/NotFoundErrorPage/NotFoundErrorPage.jsx';
 import WorkoutCreatorPage from './pages/WorkoutCreatorPage/WorkoutCreatorPage.jsx';
 import Root from './components/Root/Root.jsx';
+import store from './store.jsx'
+import { Provider } from 'react-redux';
+import NewWorkoutCreatorPage from './pages/NewWorkoutCreatorPage/NewWorkoutCreatorPage.jsx';
 
 const queryClient = new QueryClient();
 
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
             // action: contactAction,
           },
           {
+            path: 'newCreate',
+            element: <NewWorkoutCreatorPage />
+          },
+          {
             // Create Workout
             path: 'create',
             element: <WorkoutCreatorPage />,
@@ -56,8 +63,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </Provider>
   </StrictMode>
 );
