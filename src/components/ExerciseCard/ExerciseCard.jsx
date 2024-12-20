@@ -17,6 +17,7 @@ import {
 } from "@mui/material";
 import Library from "../Library/Library";
 import { useMeasure } from "@uidotdev/usehooks";
+import './ExerciseCard.css'
 
 export default function ExerciseCard({ exercises, id, selectedExercise }) {
     const dispatch = useDispatch()
@@ -65,12 +66,13 @@ export default function ExerciseCard({ exercises, id, selectedExercise }) {
                         {selectedExercise === null ? (
                             <></>
                         ) : (
-                            <ImageList>
-                                <ImageListItem>
-                                    <img src={selectedExercise.ImageLink} alt={selectedExercise.Name} />
-                                    <ImageListItemBar title={selectedExercise.Name}></ImageListItemBar>
-                                </ImageListItem>
-                            </ImageList>
+                            // <ImageList>
+                            //     <ImageListItem>
+                            //         <img src={selectedExercise.ImageLink} alt={selectedExercise.Name} />
+                            //         <ImageListItemBar title={selectedExercise.Name}></ImageListItemBar>
+                            //     </ImageListItem>
+                            // </ImageList>
+                            <Box className="selectedExercise" component="img" src={selectedExercise.ImageLink} alt={selectedExercise.Name} />
                         )}
                     </Box>
                     {/* {exercises &&
