@@ -19,7 +19,7 @@ export default function NewWorkoutCreator({ size, data }) {
 
     const exercises = useSelector((state) => state.newWorkoutCreator.value["exercises"])
     const exerciseCount = Object.keys(exercises).length
-    const exerciseCards = Object.entries(exercises).map(([key, value]) => <ExerciseCard key={key} id={key} exercises={data} />)
+    const exerciseCards = Object.entries(exercises).map(([key, value]) => <ExerciseCard key={key} id={key} exercises={data} selectedExercise={value} />)
     const selectedExercises = Object.entries(exercises).filter(([key, value]) => value !== null)
 
     function handleIncrement() {
@@ -77,7 +77,7 @@ export default function NewWorkoutCreator({ size, data }) {
                         </IconButton>
                     </Box>
                 </Box>
-                {exercises &&
+                {/* {exercises &&
                     <Box>
                         <h2>Selected Exercises</h2>
                         <div className="selected-exercises">
@@ -96,7 +96,7 @@ export default function NewWorkoutCreator({ size, data }) {
                                 </ImageList>
                             }
                         </div>
-                    </Box>}
+                    </Box>} */}
             </div>
             {size == null ? (
                 <h2>Loading...</h2>

@@ -171,7 +171,7 @@ export default function Library({ exercises, size, handleClick }) {
                     }
                   }}
                 >
-                  <img src={item.ImageLink} alt={item.Name} />
+                  <img src={item.ImageLink} alt={item.Name} loading='lazy' />
                   <ImageListItemBar title={item.Name}></ImageListItemBar>
                 </ImageListItem>
                 // <ImageListItem key={item.ID} onClick={() => handleClick(item)}>
