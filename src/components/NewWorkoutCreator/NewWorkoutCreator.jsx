@@ -11,6 +11,7 @@ import {
     Typography,
     ImageList,
     ImageListItem,
+    Button
 } from "@mui/material";
 import "./NewWorkoutCreator.css";
 
@@ -31,6 +32,16 @@ export default function NewWorkoutCreator({ size, data }) {
 
     function handleDecrement() {
         dispatch(removeLastExercise())
+    }
+
+    function handleGenerate() {
+        let ids = selectedExercises.map(x => x[1]["ID"])
+        console.log(ids)
+        axios.post("https://saveworkout-234084537667.us-south1.run.app/saveworkout", ids).then(function (response) {
+            console.log(response)
+        }).catch(function (error) {
+            console.log(error)
+        })
     }
 
     return (
@@ -75,6 +86,10 @@ export default function NewWorkoutCreator({ size, data }) {
                             +
                             {/* <AddCircleIcon /> */}
                         </IconButton>
+
+                        <Button onClick={handleGenerate}>
+                            Generate
+                        </Button>
                     </Box>
                 </Box>
                 {/* {exercises &&
