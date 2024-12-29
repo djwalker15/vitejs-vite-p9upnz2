@@ -11,6 +11,7 @@ import Root from './components/Root/Root.jsx';
 import store from './store.jsx'
 import { Provider } from 'react-redux';
 import NewWorkoutCreatorPage from './pages/NewWorkoutCreatorPage/NewWorkoutCreatorPage.jsx';
+import WorkoutsPage from './pages/WorkoutsPage/WorkoutsPage.jsx';
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
             // loader: contactLoader,
             // action: contactAction,
           },
+          {
+            path: 'workouts',
+            element: <WorkoutsPage />
+          }
           // {
           //   // Exercise Library
           //   path: 'exercises/:exerciseId',

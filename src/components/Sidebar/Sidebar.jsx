@@ -33,6 +33,12 @@ export default function Sidebar() {
                 <span>New Workout Creator</span>
               </NavLink>
             </li>
+            <li>
+              <NavLink to={`/workouts`}>
+               
+                <span>Workouts</span>
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>

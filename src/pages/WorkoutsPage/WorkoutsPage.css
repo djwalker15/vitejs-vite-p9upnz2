@@ -1,0 +1,19 @@
+.workouts {
+    display: flex;
+    flex-direction: column;
+}
+
+.exercise {
+    /* width: 200px; */
+    height: 300px;
+    margin: 0 8px;
+}
+
+.workout {
+    /* display: flex; */
+    margin: 16px 0;
+} 
+
+.exerciseCard {
+     display: flex;
+}
