@@ -39,6 +39,11 @@ export default function Sidebar() {
                 <span>Workouts</span>
               </NavLink>
             </li>
+            <li>
+              <NavLink to={`/activity`}>
+                <span>Activity</span>
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>
